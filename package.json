@@ -1,0 +1,19 @@
+{
+  "name": "csv2file",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^1.9.3",
+    "dateformat": "^1.0.12",
+    "rmdir": "^1.2.0",
+    "sanitize-filename": "^1.6.0",
+    "unidecode": "^0.1.8"
+  }
+}
