@@ -29,7 +29,8 @@ Text: field4
 
 # Installation
 
-1. run `npm install` in your csv2file directory
+1. Clone or download this repo
+2. run `npm install` in your csv2file directory
 
 # Usage
 
