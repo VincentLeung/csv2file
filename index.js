@@ -13,10 +13,10 @@ var headers = ['Date', 'Title', 'Teaser', 'Text'];
 var headerSeparator = ';';
 var dispDateFormat = "yyyy-mm-dd";
 
-function removeOutput(cb, csvFile, columnCount) {
+function removeOutput(cb, csvFile, headerList) {
     rmdir(outputDir, function(err, dirs, files){
         fs.mkdir(outputDir);
-        cb(csvFile, columnCount);
+        cb(csvFile, headerList);
     });
 }
 
@@ -26,8 +26,8 @@ function generateHeader(headerList) {
     }
 }
 
-function parseCsv(csvFile, columnCount) {
-    generateHeader(columnCount);
+function parseCsv(csvFile, headerList) {
+    generateHeader(headerList);
     var count = 0;
     fs.createReadStream(csvFile)
     .pipe(csv({
