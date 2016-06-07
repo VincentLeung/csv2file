@@ -3,7 +3,6 @@ var fs = require('fs');
 var path = require('path');
 var rmdir = require('rmdir');
 var dateFormat = require('dateformat');
-var sanitize = require("sanitize-filename");
 var unidecode = require('unidecode');
 var slug = require('slug');
 
