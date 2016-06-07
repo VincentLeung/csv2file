@@ -3,8 +3,8 @@ var fs = require('fs');
 var path = require('path');
 var rmdir = require('rmdir');
 var dateFormat = require('dateformat');
-var sanitize = require("sanitize-filename");
 var unidecode = require('unidecode');
+var slug = require('slug');
 
 var outputDir = 'output';
 var filename = 'article.txt';
@@ -42,9 +42,8 @@ function parseCsv(csvFile, columnCount) {
 }
 
 function getFolderName(outputDir, counter, rawDirBase) {
-    var dirBase = sanitize(rawDirBase);
-    dirBase = unidecode(dirBase);
-    dirBase = dirBase.replace(/\s+/g, '-');
+    var dirBase = slug(rawDirBase, {lower: true, remove: /[.]/g}); // even though valid, remove dots completely
+    dirBase = dirBase.replace(/-$/g, ''); // strip "-" for names that end with "-"
     return path.join(outputDir, counter + '-' + dirBase);
 }
 
@@ -87,7 +86,6 @@ function parseRow(counter, row) {
             });
         }
     });
-
 }
 
 if (process.argv[2]) {
