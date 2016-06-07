@@ -87,7 +87,6 @@ function parseRow(counter, row) {
             });
         }
     });
-
 }
 
 if (process.argv[2]) {
