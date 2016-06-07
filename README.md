@@ -41,7 +41,7 @@ The supplied headers don't neccessarily have to match the amount of fields in yo
 
 # Usage Example
 
-run `node index.js sample.csv date-published, headline, teaser-text, body-content`
+run `node index.js sample.csv "date-published,headline,teaser-text,body-content"`
 
 or using the default values:
 
