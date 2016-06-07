@@ -15,5 +15,8 @@
     "rmdir": "^1.2.0",
     "sanitize-filename": "^1.6.0",
     "unidecode": "^0.1.8"
+  },
+  "devDependencies": {
+    "slug": "^0.9.1"
   }
 }
